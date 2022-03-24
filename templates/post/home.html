@@ -14,7 +14,9 @@
                     <div class="shadoweffect">
                         <div class="shadow-desc">
                             <div class="blog-meta">
-                                <span class="bg-aqua"><a href="blog-category-01.html" title="">Gardening</a></span>
+                                {% for category in spost.category.all %}
+                                <span class="bg-aqua"><a href="blog-category-01.html" title="">{{category.name}}</a></span>
+                                {% endfor %}
                                 <h4><a href="garden-single.html" title="">{{spost.title}}</a></h4>
                                 <small><a href="garden-single.html" title="">{{spost.created_time|timesince}}</a></small>
                                 <small><a href="#" title="">by {{spost.author.username}}</a></small>

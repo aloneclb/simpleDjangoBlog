@@ -1,0 +1,28 @@
+{% load static %}
+
+{% include 'partials/_head.html' %}
+
+<body>
+    <div id="wrapper">
+        {% include 'partials/_navbar.html' %}
+
+        {% block content %}
+        
+        {% endblock content %}
+        
+        
+        {% include 'partials/_footer.html' %}
+    </div><!-- end wrapper -->
+
+
+    
+
+    <!-- Core JavaScript ================================================== -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/tether.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>

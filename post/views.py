@@ -48,7 +48,7 @@ class SearchView(View):
 
     def get(self, request):
         context = dict()
-        print(request.GET.get('search_value'))
+        # print(request.GET.get('search_value'))
         context['category_name'] = request.GET.get('search_value')
         context['posts'] = Post.objects.filter(body__icontains = str(request.GET.get('search_value')))
 
